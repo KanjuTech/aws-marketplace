@@ -1,5 +1,5 @@
-# aws-marketplace
-This repository contains usage instructions for the KanjuTech Transcription and Diarization model for AWS Marketplace
+# KanjuTech Transcription and Diarization model
+This repository contains usage instructions for the KanjuTech Transcription and Diarization model for AWS Marketplace.
 
 KanjuTech Transcription and Diarization model allows full end-to-end recognition of conversations with multiple participants, including cases with speech overlaps. Our product is capable of converting the recordings of dialogues and conversions into accurate transcripts with marked speakers and corresponding lines. It automatically detects the number of speakers, low word (WER), and diarization (DER) error rate. The model allows automatic transcribing of one microphone recording with many participants, overlapping speech, and background noise. The solution will be most valuable for industries such as media and broadcasting (automatic subtitle creation), call centers and client support, corporate governance (meeting transcription), etc. It may be used for app development and in-house production in many industries and applications. The model utilizes GPU acceleration and allows the processing of a one-hour recording in less than 7.5 minutes. It supports 19 languages (WER<10%).
 
