@@ -1,12 +1,80 @@
 # KanjuTech Transcription and Diarization model
-This repository contains usage instructions for the KanjuTech Transcription and Diarization model for AWS Marketplace.
+This repository contains usage instructions for the [KanjuTech Transcription and Diarization Model](https://aws.amazon.com/marketplace/pp/prodview-ngtdx4ayt4emo).
 
-KanjuTech Transcription and Diarization model allows full end-to-end recognition of conversations with multiple participants, including cases with speech overlaps. Our product is capable of converting the recordings of dialogues and conversions into accurate transcripts with marked speakers and corresponding lines. It automatically detects the number of speakers, low word (WER), and diarization (DER) error rate. The model allows automatic transcribing of one microphone recording with many participants, overlapping speech, and background noise. The solution will be most valuable for industries such as media and broadcasting (automatic subtitle creation), call centers and client support, corporate governance (meeting transcription), etc. It may be used for app development and in-house production in many industries and applications. The model utilizes GPU acceleration and allows the processing of a one-hour recording in less than 7.5 minutes. It supports 19 languages (WER<10%).
+This solution provides speech-to-text AI for businesses that require data security and accurate speaker labeling.
 
-Highlights:
+The Stable version (1.15) supports 10 languages with human-level accuracy for real-life data. 
 
-- Human-level accuracy of diarization in complex environments, different recording sound and noise levels. The only industry-grade solution to convert the conversation into transcription with detected speakers.
-- The model supports the most common formats of pre-recorded audio and video inputs. The number of speakers and language present on the recording may be defined by a user or recognized automatically.
-- 19 languages with industry-grade transcription output quality: Catalan, Dutch, English, Finnish, French, German, Indonesian, Italian, Japanese, Malay, Norwegian, Polish, Portuguese, Russian, Spanish, Swedish, Turkish, Ukrainian, and Vietnamese.
+The Release Candidate version supports an additional 19 languages with lower and unstable quality.
 
-The audio example was taken from CABank English CallHome Corpus https://ca.talkbank.org/access/CallHome/eng.html
+## Product Highlights
+
+KanjuTech's Transcription and Diarization Model ensures secure end-to-end recognition of multi-participant conversations. The model efficiently handles over 12 hours of recording in just one hour on ml.p3.2xlarge.
+
+### Data Security
+
+This solution operates within Amazon SageMaker, securely within your AWS account. Per AWS security policy, SageMaker deploys images in an environment devoid of network or AWS service endpoint access. This means that when you launch this product from AWS Marketplace, this model is deployed without network access. Additionally, AWS restricts the model from accessing the internet during runtime. Therefore, when you use this product, only you can access your data. For more detailed information about security and data access, please refer to the following resources [here](https://docs.aws.amazon.com/marketplace/latest/userguide/ml-security-and-intellectual-property.html) and [here](https://docs.aws.amazon.com/marketplace/latest/buyerguide/product-types-machine-learning-products.html).
+
+Delivery method via SageMaker supports compliance certifications:
+C5, CCCS, CISPE, DESC CSP, DoD CC SRG, ENS High, FedRAMP, FINMA, GSMA, HIPAA BAA, HITRUST CSF, IAR, IRAP, ISMAP, ISO and CSA STAR certificates, K-ISMS, MTCS, OSPAR, PCI, Pinakes, PiTuKri, SNI 27001, SOC. For further details, please visit this [page](https://aws.amazon.com/ru/compliance/services-in-scope/).
+
+### Supported Languages
+
+Use "auto" mode to automatically detect the language or specify the language code:
+- English: "en"
+- Spanish: "es"
+- French: "fr"
+- Portuguese: "pt"
+- Russian: "ru"
+- Indonesian: "id"
+- German: "de"
+- Japanese: "ja"
+- Turkish: "tr"
+- Italian: "it"
+
+The Release Candidate version supports additional languages with lower and unstable quality:
+- Chinese: "zh"
+- Vietnamese: "vi"
+- Tagalog: "tl"
+- Korean: "ko"
+- Thai: "th"
+- Polish: "pl"
+- Ukrainian: "uk"
+- Dutch: "nl"
+- Romanian: "ro"
+- Hungarian: "hu"
+- Greek: "el"
+- Swedish: "sv"
+- Czech: "cs"
+- Bulgarian: "bg"
+- Slovak: "sk"
+- Croatian: "hr"
+- Danish: "da"
+- Finnish: "fi"
+- Norwegian: "no"
+
+### Diarization (speaker detection and labeling)
+
+This solution detects and labels any number of speakers. Use "auto" mode to automatically identify the number of speakers or specify the exact number.
+
+### Benchmarks
+
+The Stable version of the model supports 10 languages with human-level accuracy WER 3-8% for real-life data.
+
+The Confusion Error Rate (CER) for audio with 6+ speakers is 2.2%.
+
+Processing 1 hour of audio requires 4 min 56 sec of computation on recommended instance ml.p3.2xlarge.
+
+### Pricing
+
+This solution offers a 14-day free trial. There will be no software charges, but AWS infrastructure charges still apply. Free Trials will automatically convert to a paid subscription upon expiration.
+
+Utilizing the model on our recommended ml.p3.2xlarge instances reduces software and infrastructure costs to less than $0.7 per record hour.
+
+### Data example
+
+The audio example was taken from [CABank English CallHome Corpus](https://ca.talkbank.org/access/CallHome/eng.html).
+
+### Contact us
+
+If you have any questions about our product, feel free to email us at aws@kanju.tech or schedule a [meeting](https://calendly.com/kanjutech).
